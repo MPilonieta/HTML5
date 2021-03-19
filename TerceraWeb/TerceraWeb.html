@@ -10,13 +10,65 @@
         p[name="miElemento"] {
             color: aqua;
         }
+        
+        p[name^="p"] {
+            font-size: medium;
+            cursor: crosshair;
+        }
+        
+        p[name$="o"] {
+            padding: 3px;
+            border: 12px;
+            width: 500px;
+            background-color: rgb(38, 99, 134);
+            border-radius: 3px;
+        }
+        
+        p:nth-child(1) {
+            font-style: italic;
+        }
+        
+        #Principal {
+            background: -o-linear-gradient(top, rgb(107, 55, 55, 0.842), rgb(149, 160, 2, 0.842));
+            background: -moz-radial-gradient(center, circle, rgb(204, 4, 4), rgb(149, 160, 2, 0.842));
+            /*tambien se puede "ellipse"*/
+            /* background-color: black; */
+            width: 200px;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+            border: 3px solid black;
+            border-radius: 8px;
+            box-shadow: black 5px 5px 6px;
+            outline: 3px dotted;
+            /* -moz-transform: scale(0.8, -1); */
+            -moz-transition: --moz-transform 1s ease 0.5s;
+        }
+        
+        #Principal:hover {
+            -moz-transform: rotate(5deg);
+        }
+        
+        #titulo {
+            font: bold 35px large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: teal;
+            text-shadow: white 3px 3px 3px;
+        }
     </style>
 </head>
 
 <body>
+    <header id="Principal">
+
+        <span id="titulo">Estilo CSS</span>
+
+    </header>
 
     <p>Hola</p>
     <p name="miElemento">Mundo</p>
+    <p name="parrafo"> hay selectores de etiquetas(
+        <>), de Id (#), y de "grupo"(usando el atributo "name")</p>
 </body>
 
 </html>
